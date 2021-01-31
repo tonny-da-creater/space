@@ -1,0 +1,144 @@
+.third-block {
+    padding: 72px 0 192px 0;
+    position: relative;
+    overflow: hidden;
+    background: url("../img/ellipses-bg.png") center center no-repeat,           
+                linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #5101A6;
+
+                .img-wrapper {
+                    height: 100%;
+                    position: absolute;
+                    left: 50%;
+                    transform: translate(-50%);
+                    top: 0;
+                    opacity: 0.5;
+                    z-index: 1;
+                } 
+
+    &__title {
+        text-align: center;
+        font-size: 32px;
+        line-height: 40px;
+        color: white;
+        z-index: 2;
+        position: relative;
+    }
+    
+    &__subtitle {
+        text-align: center;
+        max-width: 576px;
+        margin: 32px auto 48px auto;
+        font-size: 20px;
+        line-height: 28px;
+        color: white;
+        font-family: "Roboto-Regular";
+        z-index: 2;
+        position: relative;
+    }
+
+    .form {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        z-index: 2;
+        position: relative;
+
+        fieldset {
+            border: 1px solid #BB6BD9;
+            box-sizing: border-box;
+            border-radius: 6px;
+            width: 256px;
+            height: 79px;
+            transform: translateY(-7px);
+
+    
+            legend {
+                font-size: 12px;
+                font-family: "Roboto-Regular";
+                color: #FFFFFF;
+                padding: 0 14px;
+                margin-left: 3%;
+                text-align: left;
+            }
+        }
+
+        input {
+            background-color: transparent;
+            border: 0;
+            box-sizing: border-box;
+            border-radius: 6px;
+            padding: 24px;
+            width: 100%;
+            height: 100%;
+            color: #BB6BD9;
+            font-size: 16px;
+            font-family: "Roboto-Regular";
+
+            &:focus::placeholder {
+                opacity: 0;
+                visibility: hidden;
+            }
+            
+
+            &.email {
+                border: 1px solid #FFFFFF;
+                box-sizing: border-box;
+                width: 256px;
+                height: 72px;
+            }
+
+        }
+
+            button {
+                text-transform: uppercase;
+                background: #5101A6;
+                font-family: "Roboto-Bold";
+                padding: 0 81.5px;
+                color: white;
+                width: 256px;
+                height: 72px;
+                font-size: 16px;
+            }
+
+        @media all and (max-width: 1200px) {
+            flex-direction: column;
+            align-items: center;
+
+            fieldset, .email, button {
+                margin-top: 15px;
+            }
+
+
+        }
+        
+    }
+
+    svg {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+}
+
+input::placeholder {
+    color: #BB6BD9;
+    font-size: 16px;
+    font-family: "Roboto-Regular";
+
+}
+
+.footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        background: #0B0B0B;
+        z-index: 1;
+        height: 80px;
+        mix-blend-mode: multiply;
+        opacity: 0.4;
+}
+

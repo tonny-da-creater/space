@@ -1,0 +1,60 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"),
+        url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@import "fonts";
+@import "first-block";
+@import "second-block";
+@import "third-block";
+@import "slick";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.container {
+    max-width: 1276px;
+    padding: 0 30px;
+    margin: 0 auto;
+}
+
+a, input {
+    text-decoration: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.btn {
+    border-radius: 6px;
+    border: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.title {
+    font-family: "Montserrat-Bold";    
+}
+
+
+
